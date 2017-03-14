@@ -112,6 +112,8 @@ body {
 
 .bannerItem{
  // background-color: #ebebeb;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .row-background{

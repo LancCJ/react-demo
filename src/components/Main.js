@@ -11,6 +11,15 @@ import {
          }
 from 'react-bootstrap'
 
+const options = {
+  useEasing : true,
+  useGrouping : true,
+  separator : ',',
+  decimal : '.',
+  prefix : '',
+  suffix : ''
+}
+
 const option = {
   //animation:false,
   title: {
@@ -63,6 +72,34 @@ const option = {
 };
 
 class AppComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    }
+  }
+
+  componentDidMount(){
+    this.setState({
+    })
+
+    this.changeData('isworking','1000')
+    this.changeData('onlinepolice','1401')
+    this.changeData('infotoday','200')
+    this.changeData('infomounth','2200')
+    this.changeData('infototal','3200')
+    this.changeData('noticetoday','2200')
+    this.changeData('noticemounth','3200')
+    this.changeData('noticetotal','9200')
+
+    setTimeout(()=>{
+      this.changeData('isworking','5000')
+    },5000)
+  }
+
+  changeData(id,num){
+   new CountUp(id, 0, num, 0, 2.5, options).start();
+  }
+
   render() {
     return (
         <div>
@@ -115,13 +152,13 @@ class AppComponent extends React.Component {
                     <div >
                       <div className="float-left infoTab-half infoTab-border-blue">
                         <div className="verticalCenter">
-                          <div>--</div>
+                          <div id="isworking">--</div>
                           <div>在线工作</div>
                         </div>
                       </div>
                       <div className="float-right infoTab-half">
                         <div className="verticalCenter">
-                          <div>--</div>
+                          <div id="onlinepolice">--</div>
                           <div>在线民警</div>
                         </div>
                       </div>
@@ -139,19 +176,19 @@ class AppComponent extends React.Component {
                     <div >
                       <div className="float-left infoTab-Onethird infoTab-border-orange">
                         <div className="verticalCenter">
-                          <div>--</div>
+                          <div id="infotoday">--</div>
                           <div>今日新增</div>
                         </div>
                       </div>
                       <div className="float-left infoTab-Onethird infoTab-border-orange">
                         <div className="verticalCenter">
-                          <div>--</div>
+                          <div id="infomounth">--</div>
                           <div>本月新增</div>
                         </div>
                       </div>
                       <div className="float-right infoTab-Onethird">
                         <div className="verticalCenter">
-                          <div>--</div>
+                          <div id="infototal">--</div>
                           <div>累计新增</div>
                         </div>
                       </div>
@@ -169,19 +206,19 @@ class AppComponent extends React.Component {
                     <div >
                       <div className="float-left infoTab-Onethird infoTab-border-pink">
                         <div className="verticalCenter">
-                          <div>--</div>
+                          <div id="noticetoday">--</div>
                           <div>今日新增</div>
                         </div>
                       </div>
                       <div className="float-left infoTab-Onethird infoTab-border-pink">
                         <div className="verticalCenter">
-                          <div>--</div>
+                          <div id="noticemounth">--</div>
                           <div>本月新增</div>
                         </div>
                       </div>
                       <div className="float-right infoTab-Onethird">
                         <div className="verticalCenter">
-                          <div>--</div>
+                          <div id="noticetotal">--</div>
                           <div>累计新增</div>
                         </div>
                       </div>
@@ -547,7 +584,7 @@ class AppComponent extends React.Component {
                       <img  src='../images/lxr.png' className="md-icon float-left"/>
                       <div className="float-right">
                         <div className="verticalCenter">
-                          <div>0</div>
+                          <div>--</div>
                           <div>入户调查</div>
                         </div>
                       </div>
