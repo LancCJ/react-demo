@@ -83,9 +83,7 @@ class GsPage extends React.Component {
   }
 
   componentDidMount(){
-    this.setState({
-      barOption:option
-    })
+
 
     this.changeData('isworking','1000')
     this.changeData('onlinepolice','1401')
@@ -98,6 +96,9 @@ class GsPage extends React.Component {
 
     setTimeout(()=>{
       this.changeData('isworking','5000')
+      this.setState({
+        barOption:option
+      })
     },5000)
   }
 
