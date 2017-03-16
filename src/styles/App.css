@@ -16,8 +16,8 @@ body {
   height:40px;
 }
 .md-icon{
-  width:25px;
-  height:25px;
+  width:30px;
+  height:30px;
 }
 /*infoTab样式*/
 .infoTab{
@@ -99,6 +99,17 @@ body {
   float:right;
 }
 
+.clear-float-left{
+  clear:left;
+}
+.clear-float-right{
+  clear:right;
+}
+
+.clear-float-both{
+  clear:both;
+}
+
 /*勤务情况*/
 .bannerTitle{
   background-color: #f5f5f5;
@@ -134,6 +145,15 @@ body {
   background: #ffffff;
   color:#000000;
   text-align: center;
+  border-radius: 5px;
+}
+
+.dbxs-height{
+  height:60px;
+}
+
+.dbxs-height-half{
+  height:30px;
 }
 
 .dbsx-border-orange{
@@ -216,6 +236,32 @@ body {
 
 .ba-big-width{
   height:130px;
+}
+
+.border{
+  border-color: #000000;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.marginLeft{
+  margin-left:0px;
+}
+
+.height100{
+  height:100%;
+}
+
+.width40{
+  width:40%;
+}
+
+.width50{
+  width:50%;
+}
+
+.displayinline{
+  display: inline;
 }
 
 
