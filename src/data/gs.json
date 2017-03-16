@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": "qwgz",
+      "title": "勤务工作",
+      "icon": "../images/date_w.png",
+      "background":"#417DDD",
+      "tab":[
+        {
+          "id":"isworking",
+          "title":"在线工作",
+          "num":"--"
+        },
+        {
+          "id":"onlinepolice",
+          "title":"在线民警",
+          "num":"--"
+        }
+      ]
+    },
+    {
+      "id": "qwgz",
+      "title": "勤务工作",
+      "icon": "../images/date_w.png",
+      "background":"#417DDD"
+    },
+    {
+      "id": "qwgz",
+      "title": "勤务工作",
+      "icon": "../images/date_w.png",
+      "background":"#417DDD"
+    }
+  ]
+}

@@ -65,6 +65,7 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div>
+
         <Navbar  collapseOnSelect  fluid>
           <Navbar.Header>
             <Navbar.Brand>
@@ -74,13 +75,13 @@ class AppComponent extends React.Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight onSelect={this.handleSelect}>
-              <NavItem eventKey={1} href="#">
-                <OverlayTrigger trigger="click" placement="bottom" overlay={popoverBottom}>
-                  <img src='../images/item_w.png' className="small-icon"/>
-                </OverlayTrigger>
-              </NavItem>
+              <OverlayTrigger trigger="focus" placement="bottom" overlay={popoverBottom}>
+                <NavItem eventKey={1} href="#">
+                    <img src='../images/item_w.png' className="small-icon"/>
+                </NavItem>
+              </OverlayTrigger>
               <NavItem eventKey={2} href="#">通知</NavItem>
-              <NavDropdown eventKey={3} title="管理员" id="basic-nav-dropdown">
+              <NavDropdown eventKey={3} title='管理员' id="basic-nav-dropdown">
                 <MenuItem eventKey={3.1}><img src='../images/info.png' className="small-icon"/> 信息管理</MenuItem>
                 <MenuItem divider/>
                 <MenuItem eventKey={3.2}><img src='../images/key.png' className="small-icon"/> 锁屏</MenuItem>
@@ -89,7 +90,6 @@ class AppComponent extends React.Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-
 
         <Grid>
           <Row className="show-grid">
@@ -120,10 +120,7 @@ class AppComponent extends React.Component {
                 <Col sm={12}>
                   <Tab.Content animation>
                     <Tab.Pane eventKey="gs">
-
-
                       <GsPage/>
-
                     </Tab.Pane>
                     <Tab.Pane eventKey="pda">
                       <PdaPage/>
@@ -145,11 +142,8 @@ class AppComponent extends React.Component {
               </Row>
             </Tab.Container>
           </Row>
-
-          <br/>
-
-
         </Grid>
+
       </div>
     );
   }
